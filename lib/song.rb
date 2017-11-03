@@ -27,7 +27,7 @@ class Song
   end
 
   def self.find_by_name(name)
-    self.all.detect { |title| title.name == name }
+    self.all.detect { |song| song.name == name }
   end
 
   def self.find_or_create_by_name(name)
@@ -35,7 +35,7 @@ class Song
   end
 
   def self.alphabetical
-    self.all.sort_by { |title| title }
+    self.all.sort_by { |song| song.name }
   end
 
 end
